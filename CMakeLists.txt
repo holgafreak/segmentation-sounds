@@ -1,0 +1,8 @@
+PROJECT(segm2cs)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+set(CMAKE_VERBOSE_MAKEFILE 1)
+#uncomment if you have c++14 capable c++
+#set(CMAKE_CXX_FLAGS "-std=c++14”)
+FIND_PACKAGE(OpenCV 3.0 REQUIRED)
+ADD_EXECUTABLE(${PROJECT_NAME} segm2cs.cpp oscsend.cpp)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${OpenCV_LIBS} lo)
